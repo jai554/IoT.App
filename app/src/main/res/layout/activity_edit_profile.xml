@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <TextView
+        android:id="@+id/basicprofiletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Basic Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/basicprofileTBL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            tools:srcCompat="@tools:sample/avatars"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/basicprofiletext"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/basicprofileTBL"/>-->
+
+        <TableLayout
+            android:id="@+id/basicprofileTBL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basicprofiletext"
+            app:layout_constraintBottom_toTopOf="@+id/updatepasswordTBL">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr1"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/name"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Name:"/>
+                <EditText
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr3"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/PhoneNo"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="E-mail:"/>
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr4"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/phone"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Phone No.:"/>
+                <EditText
+                    android:id="@+id/phoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/updateprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:text="UPDATE PROFILE"
+                app:layout_constraintBottom_toTopOf="@+id/vehicleInfoTable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr1" />
+        </TableLayout>
+
+        <!--2ndtable-->
+    <TextView
+        android:id="@+id/updatepasswordtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Update Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basicprofileTBL" />
+
+        <TableLayout
+            android:id="@+id/updatepasswordTBL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatepasswordtxt"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr5"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/currentpass"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Current Password:"/>
+                <EditText
+                    android:id="@+id/currentpassText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textPassword" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr6"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/newpass"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="New Password:"/>
+                <EditText
+                    android:id="@+id/newpassText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textPassword" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tr7"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/confirmpass"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Confirm Password:"/>
+                <EditText
+                    android:id="@+id/confirmpassText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textPassword" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/updatepassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:text="UPDATE PASSWORD"
+                app:layout_constraintBottom_toTopOf="@+id/vehicleInfoTable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tr7" />
+        </TableLayout>
+
+<!--    </ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

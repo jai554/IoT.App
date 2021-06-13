@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageVehicles">
+
+    <TextView
+        android:id="@+id/vehicleListstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Vehicle Lists:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/vehicleLists"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/vehicleLists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/vehicleListstxt"
+        app:layout_constraintBottom_toTopOf="@+id/viewaccess">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tr2"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/plate"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Plate No."/>
+            <TextView
+                android:id="@+id/model"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Model"/>
+            <TextView
+                android:id="@+id/grant"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Grant Access"/>
+            <TextView
+                android:id="@+id/remove"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Remove"/>
+        </TableRow>
+        <View
+            android:layout_height="3dip"
+            android:layout_width="match_parent" />
+    </TableLayout>
+
+    <Button
+        android:id="@+id/viewaccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="VIEW VEHICLE ACCESS HISTORY"
+        app:layout_constraintBottom_toTopOf="@+id/addvehicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicleLists"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/addvehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="ADD NEW VEHICLE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewaccess"
+        app:layout_constraintVertical_bias="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
